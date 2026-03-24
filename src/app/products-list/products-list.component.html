@@ -1,0 +1,26 @@
+<h2 class="titulo">🛍 Productos</h2>
+
+<div class="contenedor">
+  <div class="card" *ngFor="let producto of productos">
+
+    <img [src]="producto.imagen" width="100">
+
+    <h3>{{ producto.nombre }}</h3>
+    <p>S/ {{ producto.precio }}</p>
+
+    <p *ngIf="producto.disponible; else noDisp" class="disponible">
+      Disponible
+    </p>
+
+    <ng-template #noDisp>
+      <p class="no-disponible">No disponible</p>
+    </ng-template>
+
+    <button 
+      (click)="seleccionar(producto)" 
+      [disabled]="!producto.disponible">
+      Comprar
+    </button>
+
+  </div>
+</div>

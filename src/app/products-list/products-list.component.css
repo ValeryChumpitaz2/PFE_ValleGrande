@@ -1,0 +1,48 @@
+.titulo {
+  text-align: center;
+}
+
+.contenedor {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: white;
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.card img {
+  margin-bottom: 10px;
+}
+
+.disponible {
+  color: green;
+}
+
+.no-disponible {
+  color: red;
+}
+
+button {
+  margin-top: 10px;
+  background-color: #1976d2;
+  color: white;
+  border: none;
+  padding: 8px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #125ea2;
+}
+
+button:disabled {
+  background-color: gray;
+  cursor: not-allowed;
+}
